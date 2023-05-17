@@ -24,4 +24,16 @@ angka::~angka() { //destructor
 	delete[]arr;
 	cout << "Alamat array sudah Dilepaskan" << endl;
 }
+void angka::cetakData() {
+	for (int i = 1;i <= panjang;i++) {
+		cout << i << " = " << arr[i] << endl;
+	}
+}
 
+int main() {
+	angka belajarcpp(3); //constructor dipanggil
+	angka* ptrBelajarcpp = new angka(5); //constructor
+	delete ptrBelajarcpp; //Destructor di panggil
+
+	return 0;
+}//destructor dipanggil
